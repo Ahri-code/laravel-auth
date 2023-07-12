@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use app\http\Controllers\Controller;
 use App\Models\project;
 use App\Http\Requests\StoreprojectRequest;
 use App\Http\Requests\UpdateprojectRequest;
@@ -15,7 +16,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $project = project::all();
+
+        return view("admin.projects.index", compact('project'));
     }
 
     /**
@@ -47,7 +50,7 @@ class ProjectController extends Controller
      */
     public function show(project $project)
     {
-        //
+        return view("admin.projects.show", compact('project'));
     }
 
     /**
