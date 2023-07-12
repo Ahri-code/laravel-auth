@@ -42,6 +42,18 @@
 								</a>
 							</li>
 
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ route('admin.project.index') }}">
+                                    <i class="fa-solid fa-list-alt fa-lg fa-fw"></i> Lista posts
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ route('admin.project.create') }}">
+                                    <i class="fa-solid fa-plus   fa-lg fa-fw"></i> Nuovo post
+                                </a>
+                            </li>
+
 							<li class="nav-item">
 								<a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
 									<i class="fa-solid fa-sign-out-alt fa-lg fa-fw"></i> {{ __('Logout') }}
